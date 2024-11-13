@@ -9,7 +9,7 @@ def calcular_imc():
         imc = peso / (altura ** 2)
         resultado = f"O IMC do paciente é {imc:.2f}"
         
-        # Classificação do IMC
+
         if imc < 18.5:
             resultado += " - Abaixo do peso"
         elif 18.5 <= imc < 24.9:
@@ -44,7 +44,7 @@ tk.Label(root, text="Peso (Kg):").grid(row=3, column=0, padx=10, pady=5)
 entry_peso = tk.Entry(root)
 entry_peso.grid(row=3, column=1, padx=10, pady=5)
 
-# Botão de calcular
+
 btn_calcular = tk.Button(root, text="Calcular IMC", command=calcular_imc)
 btn_calcular.grid(row=4, column=0, columnspan=2, pady=10)
 
