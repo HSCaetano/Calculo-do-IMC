@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
 
-# Função para calcular o IMC
+
 def calcular_imc():
     try:
         altura = float(entry_altura.get()) / 100  # converter altura para metros
@@ -23,11 +23,11 @@ def calcular_imc():
     except ValueError:
         messagebox.showwarning("Erro", "Por favor, insira valores válidos para altura e peso.")
 
-# Criar janela principal
+
 root = tk.Tk()
 root.title("Cálculo de IMC do Paciente")
 
-# Rótulos e entradas
+
 tk.Label(root, text="Nome do Paciente:").grid(row=0, column=0, padx=10, pady=5)
 entry_nome = tk.Entry(root)
 entry_nome.grid(row=0, column=1, padx=10, pady=5)
@@ -48,5 +48,5 @@ entry_peso.grid(row=3, column=1, padx=10, pady=5)
 btn_calcular = tk.Button(root, text="Calcular IMC", command=calcular_imc)
 btn_calcular.grid(row=4, column=0, columnspan=2, pady=10)
 
-# Executar a interface
+
 root.mainloop()
